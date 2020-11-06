@@ -22,6 +22,10 @@ func main() {
 	http.HandleFunc("/login", controller.Login)
 	//注册
 	http.HandleFunc("/regist", controller.Regist)
+	//校验用户名是否可用
+	http.HandleFunc("/checkUsername", controller.CheckUsername)
+	//获取所有图书
+	http.HandleFunc("/getBooks", controller.GetBooks)
 
 	http.ListenAndServe(":8080", nil)
 }
